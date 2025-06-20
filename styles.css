@@ -1,0 +1,298 @@
+#timeline {
+    top: 50px;
+    left: 10px;
+    position: absolute;
+    background-color: rgb(230, 236, 244);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#timeline:hover {
+    transform: scale(1.03);
+}
+#countrySelect{
+    position: absolute;
+    top: 57px;
+    left: 135px;
+    z-index: 10;
+}
+
+.controls {
+    position: absolute;
+    top: 55px;
+    left: 490px;
+}
+
+.tooltip1 {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+body{
+    background-color: rgb(230, 236, 244); 
+}
+.country {
+    cursor:default;
+}
+.blurred {
+    opacity: 0.3; /* Reduced opacity for non-focused countries */
+}
+.wm {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: rgb(230, 236, 244);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.wm:hover {
+    transform: scale(1.03);
+}
+.fdg-div {
+    position: absolute;
+    top: 420px;
+    right: 20px;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(230, 236, 244);
+    /*border: 2px solid black; /* Add the border with a solid style and specify the thickness */
+    /*border-radius: 15px; /* Adjust the value for more or less rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.fdg-div:hover {
+    transform: scale(1.03);
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+h1 {
+    font-family: 'Arial', sans-serif; /* You can change this to your preferred font */
+    font-size: 30px;  /* You can adjust the font size */
+    font-weight: bold; /* Optional: Makes the text bold */
+    color: #eaf0f3;
+    text-align: center; /* Centers the text horizontally */
+}
+.dropDown{
+    position: absolute;
+    top: 367px;
+    right: 50px;
+}
+.legend{
+    position: absolute;
+    top: 440px;
+    right: 37px;
+    z-index: 10;
+}
+.timeline_legend{
+    position: absolute;
+    top: 60px;
+    right: 640px;
+}
+.map-leg{
+    position: absolute;
+    top: 15px;
+    right: 504px;
+}
+#year-filter {
+    position: absolute;
+    top: 392px;
+    right: 90px;
+}
+#year-slider {
+    width: 400px; 
+    display: block; 
+}
+#year-display {
+    position: absolute;
+    top: 392px;
+    right: 50px;
+}
+.fdg-title {
+    position: absolute;
+    top: 415px;
+    right: 110px;
+    width: 350px;
+    height: 45px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;  /* You can adjust the font size */
+    text-align: center; /* Centers the text horizontally */
+}
+#filter-btn2,#filter-btn, #playPause{
+    background-color:#4f46e5;
+    color: white; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: inline-block;
+    border:none;
+}
+#filter-btn2:hover {
+    background-color:#06b6d4;
+    color: white;
+} 
+#filter-btn:hover {
+    background-color: #06b6d4;
+    color: white;
+}
+#playPause:hover {
+    background-color: #06b6d4;
+    color: white;
+}
+/*SUNBURST*/
+#chart-container {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 370px;
+    left: 10px;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(230, 236, 244);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#chart-container:hover {
+    transform: scale(1.03);
+}
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #666;
+}
+.sunburst-label {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+path {
+    transition: fill-opacity 0.3s;
+}
+path:hover {
+    fill-opacity: 0.8 !important;
+}
+/* Tree Map */
+#chartTree {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    left: 380px;
+    width: 600px;
+    height: 322px;
+    background-color: rgb(230, 236, 244);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#chartTree:hover {
+    transform: scale(1.03);
+}
+.legendTree {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    top: 352px;
+    left: 395px;
+}
+.legendTree-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+.legendTree-color {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+rect:hover {
+    stroke: #000;
+    stroke-width: 2px;
+    fill-opacity: 0.8;
+}
+.value-text {
+    font-size: 8px;
+}
+#year-filter1 {
+    position: absolute;
+    top: 370px;
+    right: 570px;
+}
+#yearSlider1 {
+    width: 180px; /* Set the desired width */
+    display: block; /* Ensures it respects the block layout */
+}
+#year-display1 {
+    position: absolute;
+    top: 370px;
+    right: 540px;
+}
+.conclusion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 740px;
+    width: 1500px;
+    height: 730px;
+    background-color: rgb(230, 236, 244); ;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px; /* Spacing between boxes */
+}
+
+.conclusion-box {
+    width: 30%; /* Each box takes 30% of the conclusion section */
+    height: 80%;
+    background-color: #5c97af;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;   
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.conclusion-box:hover {
+    transform: scale(1.02); /* Move the box up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.conclusion-box h3 {
+    font-size: 30px;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.conclusion-box p {
+    font-size: 16px;
+    color: #290e0e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}

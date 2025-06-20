@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>   
+
+    <div class="map-leg">
+        <svg id="leg"></svg>
+    </div>
+
+    <div id="year-filter">
+        <label for="year-slider"></label>
+        <input type="range" id="year-slider" min="1980" max="2021" value="2021" step="1" />
+    </div>
+    <div id="year-display"></div>
+  
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+    
+    <div class="wm">
+        <svg id="world-map"></svg>
+    </div>
+
+    <div class="dropDown">
+        <select id="options">
+            <option value="cNewinc">New Incidents</option>
+            <option value="pop">Total Population</option>
+            <option value="ePopM04">Male: 0-4</option>
+            <option value="ePopM514">Male: 5-14</option>
+            <option value="ePopM1524">Male: 15-24</option>
+            <option value="ePopM2534">Male: 25-34</option>
+            <option value="ePopM3544">Male: 35-44</option>
+            <option value="ePopM4554">Male: 45-54</option>
+            <option value="ePopM5564">Male: 55-64</option>
+            <option value="ePopM65">Male: 65+</option>
+            <option value="ePopF04">Female: 0-4</option>
+            <option value="ePopF514">Female: 5-14</option>
+            <option value="ePopF1524">Female: 15-24</option>
+            <option value="ePopF2534">Female: 25-34</option>
+            <option value="ePopF3544">Female: 35-44</option>
+            <option value="ePopF4554">Female: 45-54</option>
+            <option value="ePopF5564">Female: 55-64</option>
+            <option value="ePopF65">Female: 65+</option>
+            <option value="conf">Confirmed Cases</option>
+            <option value="ep">Epidemiological Indicator</option>
+            <option value="ch">Change in TB Cases</option>
+        </select>
+        <button id="filter-btn">Filter</button>
+
+        <select id="options2">
+            <option value="AMR">Americas</option>
+            <option value="EUR">Europe</option>
+            <option value="AFR">Africa</option>
+            <option value="EMR">Eastern Mediterranean</option>
+            <option value="WPR">Western Pacific</option>
+            <option value="SEA">South-East Asia</option>
+        </select>
+        <button id="filter-btn2">Region</button>
+    </div>
+
+    <script src="map.js"></script>
+
+    <div class="fdg-div">
+        <svg id="fdg"></svg>
+    </div>
+
+    <div class="legend">
+        <svg id="legend-div"></svg>
+    </div>
+
+    <div class="fdg-title">
+        <h2>Countries with similar HIV test coverage (%)</h2>
+    </div>
+
+    <script src = "fdg_temp.js"></script>  
+
+    <div class="container">
+        <select id="countrySelect"></select>
+        <div id="timeline"></div>
+
+        <div class="controls">
+            <button id="playPause">Pause</button> 
+        </div>
+        <div id="tooltip1" class="tooltip1"></div>
+    </div>
+    <div class="timeline_legend">
+        <svg class="tmLegend"></svg>
+    </div>
+    <script src="timeline_script.js"></script>
+
+    <div class="breadcrumb"></div>
+    <div id="chart-container"></div>
+
+    <script src="sunburst_script.js"></script>
+
+    <div id="year-filter1">
+        <label for="yearSlider1"></label>
+        <input type="range" id="yearSlider1" min="2000" max="2020" value="2000" step="1">
+    </div>
+    <div id="year-display1"><span id="yearLabel1">2000</span></div>    
+
+    <div id="chartTree"></div>
+    <div id="legendTree" class="legendTree"></div>
+
+    <script src="tree_script.js"></script>    
+
+    <div class="conclusion">
+        <div class="conclusion-box" id="box2">
+            <h3>About The Dataset</h3>
+            <p>Tuberculosis (TB) is an infectious disease caused by bacteria that most often affects the lungs. 
+                It spreads through the air when people with TB cough, sneeze or spit<br><br>
+                Human immunodeficiency virus (HIV) is an infection that attacks the body’s immune system. 
+                HIV targets the body’s white blood cells, weakening the immune system. This makes it easier to get sick with diseases 
+                like tuberculosis, infections and some cancers.
+            </p>
+            <p> TB is preventable and curable. About a quarter of the global population is estimated to 
+                have been infected with TB bacteria. There is no cure for HIV.
+                <br><br>The above graphs visualize TB/HIV Reports published by the World Health Organization.<p>
+        </div>
+        <div class="conclusion-box" id="box1">
+            <h3>Key Findings</h3>
+            <p><strong>> India's TB and HIV Discrepancy</strong>: Despite having a high death rate from tuberculosis, 
+                India reports significantly fewer cases of HIV testing and treatment compared to global averages, 
+                indicating underreporting or limited testing access.</p>
+            <p><strong>> Economic Disparity in Impact</strong>: TB and HIV disproportionately affect low-income populations in 
+                third-world countries, highlighting the role of socioeconomic factors in disease spread and healthcare accessibility.
+            </p>
+            <p><strong>> Testing and Treatment Gaps</strong>: Countries in the African region show a high prevalence of HIV but significantly lower HIV 
+                testing coverage (values closer to 0), delaying early detection and treatment.</p>
+        </div>
+        <div class="conclusion-box" id="box3">
+            <h3>Proposed Solution</h3>
+            <p><strong>> Scaling Up Testing Programs</strong>: Increase accessibility to free or low-cost HIV and TB testing, particularly in low-income 
+                and high-prevalence regions. Community-led testing campaigns could improve outreach.</p>
+            <p><strong>> Integrated Care Models</strong>: Combine TB and HIV care programs to address co-infection cases more effectively and ensure that 
+                both conditions are managed together.
+            </p>
+            <p><strong>> Awareness Campaigns</strong>: Launch global education programs about prevention, testing, and treatment options for TB and HIV 
+                to reduce stigma and increase early testing.
+            </p>
+        </div>
+    </div>
+    
+
+</body>
+</html>
