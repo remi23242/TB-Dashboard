@@ -47,5 +47,5 @@ All data used in this dashboard was acquired from the World Health Organization 
 
 The starter codes for the graph were taken from https://observablehq.com/@d3/gallery
 
-For a live demo, visit https://ismail-hafeez.github.io/TB-Dashboard/
+For a live demo, visit https://remi23242.github.io/TB-Dashboard/
 
